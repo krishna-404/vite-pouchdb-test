@@ -5,6 +5,7 @@ export const DisplayFile = () => {
 
     const [docList, setDocList] = useState();
     console.log(docList);
+    const [downloadLink, setDownloadLink] = useState();
 
     useEffect(() => {
         const runUseEffect = async () => {
@@ -28,10 +29,14 @@ export const DisplayFile = () => {
     const handleDownload = (blob) => {
         let objectUrl = URL.createObjectURL(blob);
         console.log(objectUrl);
+        setDownloadLink(objectUrl);
     }
 
     return (
         <div style={{display: "flex", flexDirection: "column", margin: "5px"}}>
+            {downloadLink &&
+                <a href={downloadLink}>Download File Click here</a>
+            }
             {docList && docList?.map(mapObj => (
                 <button key={mapObj.id} onClick={() => handleDownload(mapObj?.doc?._attachments?.file0?.data)}>
                     {mapObj?.id}
