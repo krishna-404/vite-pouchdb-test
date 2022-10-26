@@ -1,7 +1,7 @@
 import PouchDB from "pouchdb-browser";
 import { constants } from "../constants";
 
-const dbName = "vite_pouchdb_test"
+const dbName = "masters_000000001"
 const localDB = new PouchDB(dbName, {auto_compaction: true});
 const remoteDB = new PouchDB(`${constants.COUCH_URL}/${dbName}`, {skip_setup: true});
 
