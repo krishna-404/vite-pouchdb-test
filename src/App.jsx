@@ -31,7 +31,7 @@ function App() {
       Login: {isLogin ? "true" : "false"}
       <UploadFile />
       <button onClick={() => setDisplayFiles(!displayFiles)}>
-        Display Files
+        Display Files.
       </button>
       {displayFiles && 
         <DisplayFile />
