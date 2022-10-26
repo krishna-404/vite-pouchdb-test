@@ -5,7 +5,7 @@ import handleSignIn from './database/handleSignIn';
 import {initialReplication} from './database/dbCalls';
 import { constants } from './constants';
 import UploadFile from './UploadFile';
-import { DisplayFile } from './displayFiles';
+import { DisplayFile } from './DisplayFiles';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
