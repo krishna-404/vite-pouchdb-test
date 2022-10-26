@@ -4,7 +4,7 @@ import './App.css'
 import handleSignIn from './database/handleSignIn';
 import {initialReplication} from './database/dbCalls';
 import { constants } from './constants';
-import UploadFile from './uploadFile';
+import UploadFile from './UploadFile';
 import { DisplayFile } from './displayFiles';
 
 function App() {
